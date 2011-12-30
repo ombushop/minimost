@@ -2,7 +2,7 @@
 
 Todos los templates del theme Minimost sobre la plataforma Ombu Shop.
 
-Estos templates utilizan la (API para diseñadores)[http://www.ombushop.com/liquid-api/index.html]
+Estos templates utilizan la [API para diseñadores](http://www.ombushop.com/liquid-api/index.html)
 
 ## Instalación
 
