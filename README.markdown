@@ -10,7 +10,14 @@ Para poder utilizar estos templates es necesario tener una tienda virtual sobre 
 
 Para utilizar este template: 
 
-  * Ir a http://www.ombushop.com/admin
-  * Diseño > Configuración
-  * Seleccionar 'Minimost'
-  * Presionar 'Guardar'
+  1. Ir a http://www.ombushop.com/admin
+  2. Diseño > Configuración
+  3. Seleccionar 'Minimost'
+  4. Presionar 'Guardar'
+
+## Feedback
+
+Por cualquier consulta o problema con este theme, crear un issue o
+mandar un mail a hola@ombushop.com
+
+Gracias!
