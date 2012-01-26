@@ -20,4 +20,4 @@ Para utilizar este template:
 Por cualquier consulta o problema con este theme, crear un issue o
 mandar un mail a hola@ombushop.com
 
-Gracias!
+Muchas gracias!
