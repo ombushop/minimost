@@ -401,15 +401,12 @@ ul#navigation_bar li a {
 	color: #555;
 	display: block;
 	padding: 3px 8px;				
-	-webkit-text-shadow: 	0 1px 0 #FFF;
-	-moz-text-shadow: 		0 1px 0 #FFF;
-	-o-text-shadow: 			0 1px 0 #FFF;
-	text-shadow: 					0 1px 0 #FFF;
 	-webkit-transition: 	all 200ms ease-out;
 	-moz-transition: 			all 200ms ease-out;
 	-o-transition: 				all 200ms ease-out;
 	transition: 					all 200ms ease-out;
 } 
+
 ul#navigation_bar li a:hover {
 	color: #fff;
 	background-image: none;
@@ -421,6 +418,7 @@ ul#navigation_bar li a:hover {
 	-o-text-shadow: 			0 1px 0 #000;
 	text-shadow: 					0 1px 0 #000;
 }
+
 ul#navigation_bar li a:active {
 	color: #fff;
 	background-image: none;
