@@ -407,6 +407,10 @@ ul#navigation_bar li a {
 	transition: 					all 200ms ease-out;
 } 
 
+ul#navigation_bar li.current-page a {
+	border-bottom: 3px solid #555;
+}
+
 ul#navigation_bar li a:hover {
 	color: #fff;
 	background-image: none;

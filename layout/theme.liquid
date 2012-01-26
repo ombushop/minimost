@@ -79,7 +79,7 @@
           </div>  
     			<ul id="navigation_bar"> 
 						{% for page in pages %}
-						<li><a href="{{ page.url }}" {% if page.url == current_path %}class="current-page"{% endif %} title="{{ page.title }}">{{ page.title }}</a></li>
+						<li {% if page.url == current_path %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
 						{% endfor %}
 					</ul>
         </div><!-- end "header" -->
