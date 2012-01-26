@@ -400,18 +400,7 @@ ul#navigation_bar li {
 ul#navigation_bar li a {
 	color: #555;
 	display: block;
-	padding: 3px 8px;
-	/*background: #efefef;
-	background: white url(/images/shadow_top.png) 0px -35px repeat-x;*/
-	
-	background: -moz-linear-gradient(top, rgba(238,238,238,0) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,0)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* Opera11.10+ */
-	background: -ms-linear-gradient(top, rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
-	background: linear-gradient(top, rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* W3C */
-			
+	padding: 3px 8px;				
 	-webkit-text-shadow: 	0 1px 0 #FFF;
 	-moz-text-shadow: 		0 1px 0 #FFF;
 	-o-text-shadow: 			0 1px 0 #FFF;

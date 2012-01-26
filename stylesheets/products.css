@@ -219,7 +219,10 @@ ul#nav-bar li {
 .navigation-list a.root{
   text-indent: 0;
 }
-.breadcrumbs { margin-bottom: 1em; }
+.breadcrumbs {
+	margin-bottom: 1.7em;
+	font-size: 12px;
+}
 .breadcrumbs ul {
   list-style-type: none;
   margin: 0px;
