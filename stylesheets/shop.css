@@ -250,7 +250,7 @@ legend {
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 	box-shadow: 				0 0 10px rgba(0, 0, 0, 0.12);
   background: #FFFFFF;
-  border-top: 2px solid #555;
+  border-top: 2px solid #000;
   margin: 15px auto 0;
   min-height: 500px;
   padding: 25px 20px 20px;
@@ -405,16 +405,18 @@ ul#navigation_bar li a {
 	-moz-transition: 			all 200ms ease-out;
 	-o-transition: 				all 200ms ease-out;
 	transition: 					all 200ms ease-out;
+	border-bottom: 3px solid #fff;
 } 
 
 ul#navigation_bar li.current-page a {
-	border-bottom: 3px solid #555;
+	border-bottom: 3px solid #000;
 }
 
 ul#navigation_bar li a:hover {
 	color: #fff;
 	background-image: none;
 	background-color: #555;
+	border-bottom: 3px solid #555;
 	margin-top: -4px;
 	padding-bottom: 7px;
 	-webkit-text-shadow: 	0 1px 0 #000;
@@ -427,6 +429,7 @@ ul#navigation_bar li a:active {
 	color: #fff;
 	background-image: none;
 	background-color: #444;
+	border-bottom: 3px solid #444;
 	margin-top: -2px;
 	padding-bottom: 5px;
 	-webkit-transition: none;
