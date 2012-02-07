@@ -212,28 +212,6 @@ form p.field select {
 }
 form p.field.radios { line-height: 150%; }
 label { font-weight: bold; }
-div#checkout #checkout_form_address #billing label.error {
-  color: red;
-  float: left;
-  text-align: left;
-  display: inline-block;
-  top: 0px;
-  font-size: 11px;
-  border: none;
-  padding: 0px;
-  width: auto;
-}
-div#checkout #checkout_form_address #shipping label.error {
-  color: red;
-  float: left;
-  text-align: left;
-  display: inline-block;
-  top: 0px;
-  font-size: 11px;
-  border: none;
-  padding: 0px;
-  width: auto;
-}
 fieldset { margin-bottom: 1em; }
 legend {
   font-size: 150%;
