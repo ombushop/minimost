@@ -465,18 +465,15 @@ ul.product-listing li.product .product-price a {
 
 /* === SHARE */
 #content.index div.social-container {
-	margin-top: 0;
-	margin-right: 10px;
-	margin-left: 15px;
-	padding-top: 10px;
-	padding-bottom: 30px;
+	text-align: left;
 }
-#content.index div.social-container .fb-like {
-	display: block;
-	margin: 0 auto;
+#content.index div.social-container .fb-like, #content.index div.social-container div.fb-like-container {
+	display: block !important;
+	margin-left: 0px !important;
+	text-align: left !important;
 }
-#content.index div.social-container .twitter-share-button {
-	display: block;
+#content.index div.social-container .twitter-share-button, #content.index div.social-container div.twitter-share-button-container {
+	display: block !important;
 	width: 107px;
 	margin: 0 auto;
 }
