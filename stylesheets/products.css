@@ -388,48 +388,101 @@ p button img { margin: 0 5px 0 0; }
   margin: -10px 0 0;
   padding: 0;
 }
-.product-listing li {
-  border: 1px solid #d0d0d0;
-  height: 290px;
-  min-height: 230px;
-  min-width: 140px;
+
+/*
+======================
+======================
+START
+======================
+======================
+*/
+
+ul.product-listing li.product {
+	border: 1px solid #d0d0d0;
+	width: 220px;
   text-align: center;
   float: left;
   margin: 10px;
-  position: relative;
 }
-.product-listing li img{
+ul.product-listing li.product:hover {
+	border-color: #1b1b1b;
+}
+ul.product-listing li.product:hover .product-name a, ul.product-listing li.product:hover .product-price a {
+
+}
+ul.product-listing li.product a.image-link-container {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+ul.product-listing li.product a.image-link-container img {
 	width: 220px;
+	margin: auto;
+	display: block;
 }
-.product-listing li a {
-  display: block;
-  text-decoration: none;
-  color: #111111;
-}
-.product-listing li a.info {
+ul.product-listing li.product .product-info {
   background: #ffffff url(/images/shadow_top.png) 0px -35px repeat-x;
   border-top:1px solid #CCC;
-  bottom: 0px;
   color: #666;
   font-size: 12px;
   font-weight: bold;
-  left: 0px;
   min-height: 60px;
   padding: 5px;
-  position: absolute;
   text-transform: uppercase;
   width: 95.5%;
+	text-align: center;
 }
-.product-listing li a.info span {
-  color: #CCC;
-  display: block;
-  font-size: 16px;
-}
-.product-listing li:hover { border-color: #1b1b1b; }
-.product-listing li:hover a.info {
+ul.product-listing li.product:hover .product-info {
   background: #1b1b1b url(/images/bottom_shine.png) bottom left repeat-x;
   color: #ffffff;
 }
+
+ul.product-listing li.product a {
+  display: block;
+  text-decoration: none;
+}
+
+ul.product-listing li.product h4.product-name {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+}
+ul.product-listing li.product .product-price {
+	color: #CCC;
+	display: block;
+	font-size: 16px;
+	margin: 0;
+}
+ul.product-listing li.product .product-name a{
+	display: block;
+	color: #666;
+}
+ul.product-listing li.product .product-price a {
+	color: #CCC;
+	display: block;
+	font-size: 16px;
+}
+
+/* === SHARE */
+#content.index div.social-container {
+	margin-top: 0;
+	margin-right: 10px;
+	margin-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+#content.index div.social-container .fb-like {
+	display: block;
+	margin: 0 auto;
+}
+#content.index div.social-container .twitter-share-button {
+	display: block;
+	width: 107px;
+	margin: 0 auto;
+}
+
+/* === */
+
 
 ul.thumbnails {
   margin: 0;
