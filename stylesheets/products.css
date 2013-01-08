@@ -477,6 +477,19 @@ ul.product-listing li.product .product-price a {
 	width: 107px;
 	margin: 0 auto;
 }
+#content.index div.social-container a.pin-it-button, #content.index div.social-container a {
+	display: block;
+	float: right;
+	margin-right: -20px;
+	width: 107px;
+	position: absolute !important;
+	bottom: 5px;
+	right: 5px;
+}
+div.in-product-social-container {
+  margin: 20px 0;
+}
+
 
 /* === */
 
