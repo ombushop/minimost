@@ -126,7 +126,7 @@ ul#nav-bar li {
   padding: 5px 15px;
 }
 
-/* === SIDEBAR */
+/* === COLUMNA LATERAL */
 #sidebar {
   display: inline;
   float: left;
@@ -240,7 +240,7 @@ ul#language-bar strong {  font-weight: 400 }
   text-decoration: none;
 }
 
-/* === PAGINATION */
+/* === PAGINACION */
 .pagination a.page:hover {
   border: 1px solid #2b66a5;
   color: #000;
@@ -266,7 +266,7 @@ ul#language-bar strong {  font-weight: 400 }
   font-weight: 700;
 }
 
-/* === FORM ERRORS */
+/* === FORMULARIOS Y ERRORES */
 .formError {
   -webkit-border-radius: 5px;
   -moz-border-radius:    5px;
@@ -312,7 +312,7 @@ button.large, a.button.large, input.button.large {
   line-height: 1.4em;
 }
 
-/* === FORMS */
+/* === FORMULARIOS */
 button.small, a.button.small, input.button.small {
   -webkit-border-radius: 4px;
   -moz-border-radius:    4px;
@@ -355,7 +355,7 @@ p button img {  margin: 0 5px 0 0 }
   font-weight: 400;
 }
 
-/* === PRODUCT LISTING */
+/* === LISTADO DE PRODUCTOS */
 .product-listing {
   float: left;
   list-style: none;
@@ -422,8 +422,12 @@ ul.product-listing li.product .product-price a {
   font-size: 16px;
 }
 
-/* === SHARE */
-#content.index div.social-container {  text-align: left }
+/* === REDES SOCIALES */
+#content.index div.social-container {
+	text-align: left;
+	position: relative;
+	min-height: 20px;
+}
 #content.index div.social-container .fb-like, #content.index div.social-container div.fb-like-container {
   display: block !important;
   margin-left: 0 !important;
@@ -434,14 +438,16 @@ ul.product-listing li.product .product-price a {
   margin: 0 auto;
   width: 107px;
 }
-#content.index div.social-container a.pin-it-button, #content.index div.social-container a {
-  bottom: 5px;
+#content.index div.social-container div.pinterest-container {
   display: block;
-  float: right;
-  margin-right: -20px;
-  position: absolute !important;
-  right: 5px;
+  text-align: right;
   width: 107px;
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+}
+#content.index div.social-container a.pin-it-button, #content.index div.social-container a {
+  display: block;
 }
 div.in-product-social-container {  margin: 20px 0 }
 
@@ -472,7 +478,7 @@ ul.thumbnails li:hover {  border-color: #ccc }
 ul.thumbnails li.selected {  border-color: #999 }
 #thumbnails {  margin-top: 20px }
 
-/* === PRODUCT */
+/* === PRODUCTOS */
 #product-variants {  margin-bottom: 1em }
 #product-variants ul {
   list-style: none;
@@ -513,7 +519,7 @@ ul.thumbnails li.selected {  border-color: #999 }
   line-height: 1.3em;
 }
 
-/* === CART */
+/* === CARRITO */
 #cart-form {
   display: inline;
   float: left;

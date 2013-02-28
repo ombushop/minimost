@@ -142,6 +142,9 @@ a {
   color: #2e6ab1;
   text-decoration: underline;
 }
+#login-bar a {
+  text-decoration: none;
+}
 blockquote {
   color: #666;
   font-style: italic;
@@ -234,52 +237,7 @@ legend {
   position: relative;
 }
 
-/* === FOOTER */
-#footer {
-  border-top: 2px solid #555;
-  clear: both;
-  color: #777;
-  font-size: 12px;
-  min-height: 100px;
-  overflow: auto;
-  padding: 1em 1em 0;
-  position: relative;
-}
-#footer div.store_footer {
-  clear: none;
-  display: block;
-  overflow: auto;
-  padding: 0;
-  width: 725px;
-}
-#footer div.left {  width: 37% }
-#footer div.right {
-  text-align: right;
-  width: 63%;
-}
-#footer div.footer-area1, #footer div.footer-area2, #footer div.footer-area3 {
-  float: left;
-  width: 33%;
-}
-#footer div.footer-area1 > *, #footer div.footer-area2 > *, #footer div.footer-area3 > * {  padding-right: 20px }
-#footer h3 {
-  margin-bottom: 8px;
-  margin-top: 3px;
-}
-#ombu-footer {
-  margin-bottom: 0;
-  text-align: right;
-}
-#ombu-footer p {  margin-bottom: 0 }
-#ombu-footer img {  margin-top: -3px }
-div#ombu-footer {
-  bottom: 15px;
-  height: 38px;
-  left: 0;
-  position: absolute;
-}
-
-/* === HEADER */
+/* === ENCABEZADO */
 #header {
   background-color: #FFF;
   clear: both;
@@ -332,13 +290,14 @@ div#ombu-footer {
   border-top-color: #777;
 }
 #search_bar {
-  clear: both;
-  float: right;
-  margin: -69px -15px 0 0;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  text-align: right;
 }
 #search_bar label {  display: none }
 
-/* === NAVIGATION */
+/* === NAVEGACION */
 ul#navigation_bar {
   bottom: -15px;
   display: block;
@@ -389,3 +348,49 @@ ul#navigation_bar li a:active {
   margin-top: -2px;
   padding-bottom: 5px;
 }
+
+/* === PIE */
+#footer {
+  border-top: 2px solid #555;
+  clear: both;
+  color: #777;
+  font-size: 12px;
+  min-height: 100px;
+  overflow: auto;
+  padding: 1em 1em 0;
+  position: relative;
+}
+#footer div.store_footer {
+  clear: none;
+  display: block;
+  overflow: auto;
+  padding: 0;
+  width: 725px;
+}
+#footer div.left {  width: 37% }
+#footer div.right {
+  text-align: right;
+  width: 63%;
+}
+#footer div.footer-area1, #footer div.footer-area2, #footer div.footer-area3 {
+  float: left;
+  width: 33%;
+}
+#footer div.footer-area1 > *, #footer div.footer-area2 > *, #footer div.footer-area3 > * {  padding-right: 20px }
+#footer h3 {
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+#ombu-footer {
+  margin-bottom: 0;
+  text-align: right;
+}
+#ombu-footer p {  margin-bottom: 0 }
+#ombu-footer img {  margin-top: -3px }
+div#ombu-footer {
+  bottom: 15px;
+  height: 38px;
+  left: 0;
+  position: absolute;
+}
+
