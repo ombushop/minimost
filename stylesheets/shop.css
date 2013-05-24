@@ -1,3 +1,6 @@
+/* @override 
+	http://probandomails.local/assets/stylesheets/48/shop.css */
+
 /* 
 **************************************
 OmbuShop - Tu Tienda Online
@@ -24,7 +27,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* === GENERALES */
 body {
   line-height: 1.5;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Arial, 'Helvetica', sans-serif;
+  font-weight: 300;
   font-size: 14px;
   color: #111111;
   background: #ffffff; /* old browsers */
@@ -246,7 +250,7 @@ legend {
   margin: 0 auto;
   min-height: 120px;
   position: relative;
-  width: 950px;
+  width: 990px;
 }
 #header a {
   color: #333;
@@ -280,7 +284,7 @@ legend {
   border-top: 1px solid #888;
   color: #FFF;
   display: inline-block;
-  margin-right: -15px;
+  margin-right: 0px;
   padding: 5px 15px;
   text-shadow: 0 1px #333;
 }
@@ -301,12 +305,12 @@ legend {
 ul#navigation_bar {
   bottom: -15px;
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   margin: 0;
   overflow: auto;
   padding: 5px 0 0;
   position: absolute;
-  right: -10px;
+  right: 0;
 }
 ul#navigation_bar li {
   float: left;
@@ -323,18 +327,21 @@ ul#navigation_bar li a {
   display: block;
   padding: 3px 8px;
 }
-ul#navigation_bar li.current-page a {  border-bottom: 3px solid #000 }
+ul#navigation_bar li.current-page a {
+  border-bottom: 3px solid #000;
+  font-weight: 400;
+  color:  #222;
+}
 ul#navigation_bar li a:hover {
   -webkit-text-shadow: 0 1px 0 #000;
   -moz-text-shadow:    0 1px 0 #000;
   -o-text-shadow:      0 1px 0 #000;
   text-shadow:         0 1px 0 #000;
-  background-color: #555;
-  background-image: none;
-  border-bottom: 3px solid #555;
+  border-bottom: 3px solid #333;
   color: #fff;
   margin-top: -4px;
   padding-bottom: 7px;
+  background: none #333;
 }
 ul#navigation_bar li a:active {
   -webkit-transition: none;
@@ -349,14 +356,35 @@ ul#navigation_bar li a:active {
   padding-bottom: 5px;
 }
 
+/* === SEARCH FIELD === */
+#search_bar input#keywords {
+  border: #aaa solid 1px;
+  background: #ddd;
+  color: #333;
+} 
+#search_bar input#keywords:focus, #search_bar input#keywords:hover {
+  border: #888 solid 1px;
+  background: #eee;
+}
+#search_bar input {
+  border: #888 solid 1px;
+  background: #888;
+  color: #fff;
+  cursor:  pointer;
+}
+#search_bar input:hover {
+  background: #666;
+}
+
 /* === PIE */
 #footer {
   border-top: 2px solid #555;
   clear: both;
   color: #777;
   font-size: 12px;
+  font-weight: 400;
   min-height: 100px;
-  overflow: auto;
+  overflow: visible;
   padding: 1em 1em 0;
   position: relative;
 }
@@ -365,7 +393,8 @@ ul#navigation_bar li a:active {
   display: block;
   overflow: auto;
   padding: 0;
-  width: 725px;
+  width: 100%;
+  text-align: center;
 }
 #footer div.left {  width: 37% }
 #footer div.right {

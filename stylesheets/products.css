@@ -1,3 +1,6 @@
+/* @override 
+	http://probandomails.local/assets/stylesheets/48/products.css */
+
 /* 
 **************************************
 OmbuShop - Tu Tienda Online
@@ -148,7 +151,7 @@ ul#nav-bar li {
   color: #444;
   cursor: pointer!important;
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4em;
   margin-bottom: 5px;
   overflow: hidden;
@@ -347,7 +350,10 @@ p a.button img {  margin: 0 5px 0 0 }
 p button img {  margin: 0 5px 0 0 }
 .prices {  font-weight: 700 }
 .prices #product-details .prices {  font-size: 1.25em }
-.price.selling {  color: #2e6ab1 }
+.price.selling {
+  color: #333;
+  font-weight: 300;
+}
 #product-details .price.selling {  font-size: 1.5em }
 .price.diff {
   color: #666;
@@ -370,7 +376,9 @@ ul.product-listing li.product {
   text-align: center;
   width: 220px;
 }
-ul.product-listing li.product:hover {  border-color: #1b1b1b }
+ul.product-listing li.product:hover {
+  border-color: #aaa;
+}
 ul.product-listing li.product a.image-link-container {
   display: block;
   position: relative;
@@ -382,44 +390,47 @@ ul.product-listing li.product a.image-link-container img {
   width: 220px;
 }
 ul.product-listing li.product .product-info {
-  background: #fff url(/images/shadow_top.png) 0 -35px repeat-x;
+  background: #efefef;
   border-top: 1px solid #CCC;
-  color: #666;
+  color: #333;
   font-size: 12px;
   font-weight: 700;
   min-height: 60px;
-  padding: 5px;
   text-align: center;
   text-transform: uppercase;
   width: 95.5%;
+  padding: 5px;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: background color;
+  transition-property: background color;
 }
 ul.product-listing li.product:hover .product-info {
-  background: #1b1b1b url(/images/bottom_shine.png) bottom left repeat-x;
-  color: #fff;
+  background: #ccc;
 }
 ul.product-listing li.product a {
   display: block;
   text-decoration: none;
 }
 ul.product-listing li.product h4.product-name {
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 700;
   margin: 0;
 }
 ul.product-listing li.product .product-price {
-  color: #CCC;
   display: block;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 300;
   margin: 0;
 }
 ul.product-listing li.product .product-name a {
-  color: #666;
+  color: #444;
   display: block;
 }
 ul.product-listing li.product .product-price a {
-  color: #CCC;
+  color: #444;
   display: block;
-  font-size: 16px;
+  padding-bottom: 10px;
 }
 
 /* === REDES SOCIALES */
@@ -527,8 +538,10 @@ ul.thumbnails li.selected {  border-color: #999 }
   width: 240px;
 }
 #cart-form button.large {
-  font-size: 14px!important;
+  font-size: 14px;
   padding: 5px 10px;
+  margin-top: -20px;
+  margin-bottom:20px;
 }
 #cart-form input {
   font-size: 16px;
