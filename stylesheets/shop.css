@@ -243,7 +243,7 @@ legend {
   background-color: #FFF;
   clear: both;
   color: #2e6ab1;
-  height: 70px;
+  height: 140px;
   margin: 0 auto;
   min-height: 120px;
   position: relative;
@@ -292,7 +292,7 @@ legend {
 }
 #search_bar {
   position: absolute;
-  top: 50px;
+  top: 36px;
   right: 0;
   text-align: right;
 }
@@ -302,7 +302,7 @@ legend {
 ul#navigation_bar {
   bottom: -15px;
   display: block;
-  font-size: 15px;
+  font-size: 17px;
   margin: 0;
   overflow: auto;
   padding: 5px 0 0;
@@ -322,7 +322,8 @@ ul#navigation_bar li a {
   border-bottom: 3px solid #fff;
   color: #555;
   display: block;
-  padding: 3px 8px;
+  padding: 3px 12px;
+  border-radius: 3px 3px 0 0;
 }
 ul#navigation_bar li.current-page a {
   border-bottom: 3px solid #000;
@@ -330,47 +331,47 @@ ul#navigation_bar li.current-page a {
   color:  #222;
 }
 ul#navigation_bar li a:hover {
-  -webkit-text-shadow: 0 1px 0 #000;
-  -moz-text-shadow:    0 1px 0 #000;
-  -o-text-shadow:      0 1px 0 #000;
-  text-shadow:         0 1px 0 #000;
   border-bottom: 3px solid #333;
-  color: #fff;
+  color:  #111;
   margin-top: -4px;
   padding-bottom: 7px;
-  background: none #333;
+  background: #eee;
 }
 ul#navigation_bar li a:active {
   -webkit-transition: none;
   -moz-transition:    none;
   -o-transition:      none;
   transition:         none;
-  background-color: #444;
+  background-color: #ddd;
   background-image: none;
   border-bottom: 3px solid #444;
-  color: #fff;
+  color:  #111;
   margin-top: -2px;
   padding-bottom: 5px;
 }
 
 /* === SEARCH FIELD === */
 #search_bar input#keywords {
-  border: #aaa solid 1px;
-  background: #ddd;
+  border: #e0e0e0 solid 1px;
+  background: #f1f1f1;
   color: #333;
+  border-radius: 3px 0 0 3px;
 } 
 #search_bar input#keywords:focus, #search_bar input#keywords:hover {
   border: #888 solid 1px;
   background: #eee;
 }
 #search_bar input {
-  border: #888 solid 1px;
-  background: #888;
+  border: #aaa solid 1px;
+  background: #bbb;
   color: #fff;
-  cursor:  pointer;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  padding: 3px 6px;
 }
 #search_bar input:hover {
   background: #666;
+  border: #666 solid 1px;
 }
 
 /* === PIE */
