@@ -453,7 +453,7 @@ ul.product-listing li.product .product-price a {
   width: 107px;
   position: absolute !important;
   right: 0;
-  bottom: 0;
+  bottom: -4px;
 }
 #content.index div.social-container a.pin-it-button, #content.index div.social-container a {
   display: block;
