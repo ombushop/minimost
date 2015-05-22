@@ -32,11 +32,13 @@
     <link href='/themes/minimost/stylesheets/basic.css' rel='stylesheet' type='text/css' />
     <link href='/themes/minimost/stylesheets/buttons.css' rel='stylesheet' type='text/css' />
     <link href='/themes/minimost/stylesheets/advice.css' rel='stylesheet' type='text/css' />
+    <link href='/themes/minimost/stylesheets/contact.css' rel='stylesheet' type='text/css' />
 
     {{ 'shop.css' | asset_url | stylesheet_tag }}
     {{ 'products.css' | asset_url | stylesheet_tag }}
 
     <link href='/themes/minimost/stylesheets/logo.css' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <script src='/themes/minimost/javascripts/jquery-1.4.2.min.js' type='text/javascript'></script>
     <script src='/themes/minimost/javascripts/jquery.validate.min.js' type='text/javascript'></script>
@@ -146,6 +148,17 @@
               {% endif %}
             </li>
           </ul>
+          <div id="contact-info">
+            <ul>
+              <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
+              <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
+            </ul>
+          </div>
           <div id="search_bar">
             <form accept-charset="UTF-8"
                   action="/products" method="get">
@@ -176,10 +189,42 @@
           {{ content_for_layout }}
 
           <div id="footer">
-            {{ content_for_footer }}
-            <div class="store_footer">
-              {{ shop.footer }}
+            <div class="footer-container">
+              <div class="store_footer">
+                <div id="contact-info">
+                  <h1>Contactanos</h1>
+                  <ul>
+                    <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
+                  </ul>
+                </div>
+                <p>{{ shop.footer }}</p>
+              </div>
+            <div id="footer-nav">
+              <h1>Navegación</h1>
+              <ul class="links">
+                {% if shop.homepage %}
+                <li><a href="/products">Productos</a></li>
+                {% endif %}
+                {% for page in pages %}
+                <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+                {% endfor %}
+              </ul>
             </div>
+            <div id="follow-us">
+                <h1>Seguinos</h1>
+                <div id="contact-info">
+                  <ul>
+                    <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                    <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
+                    <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+            <a href="#" class="ombu-tagline" title="Ombushop. Tu plataforma de venta online" target="_blank"><strong>OmbuShop.</strong>Tu plataforma de venta online</a>
           </div> <!-- end "footer" -->
         </div> <!-- end "wrapper" -->
       </div> <!-- end "page" -->

@@ -1,4 +1,4 @@
-/* 
+/*
 **************************************
 OmbuShop - Tu Tienda Online
 **************************************
@@ -176,7 +176,7 @@ li ul {  margin: 0 }
 li ol {  margin: 0 1.5em }
 ul {
   list-style-type: disc;
-  margin: 0 1.5em 1.5em;
+  margin: 0;
 }
 ol {
   list-style-type: decimal;
@@ -234,7 +234,7 @@ legend {
   border-top: 2px solid #000;
   margin: 15px auto 0;
   min-height: 500px;
-  padding: 25px 20px 20px;
+  padding: 25px 20px 0px;
   position: relative;
 }
 
@@ -292,12 +292,47 @@ legend {
 }
 #search_bar {
   position: absolute;
-  top: 36px;
+  top: 50px;
   right: 0;
   text-align: right;
 }
 #search_bar label {  display: none }
-
+#contact-info{
+  position: absolute;
+  right: 140px;
+  top: 10px;
+}
+#contact-info ul{
+  margin-left: 0;
+}
+#contact-info ul li{
+  float: left;
+  text-align: left;
+  padding: 0 3px;
+}
+#contact-info ul li a{
+  color:#000;
+  background: none;
+}
+#contact-info ul li a i{
+  width: 20px;
+  background-color: #E0E0E0;
+  padding: 4px 2px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 15px;
+  color: #666666;
+}
+#contact-info ul li a:hover i{
+  color: #000000;
+}
+#contact-info ul li.phone{
+  margin-left: 10px;
+  color: #666;
+}
+#contact-info ul li.phone i{
+  margin-right: 5px;
+}
 /* === NAVEGACION */
 ul#navigation_bar {
   bottom: -15px;
@@ -356,7 +391,7 @@ ul#navigation_bar li a:active {
   background: #f1f1f1;
   color: #333;
   border-radius: 3px 0 0 3px;
-} 
+}
 #search_bar input#keywords:focus, #search_bar input#keywords:hover {
   border: #888 solid 1px;
   background: #eee;
@@ -375,25 +410,6 @@ ul#navigation_bar li a:active {
 }
 
 /* === PIE */
-#footer {
-  border-top: 2px solid #555;
-  clear: both;
-  color: #777;
-  font-size: 12px;
-  font-weight: 400;
-  min-height: 100px;
-  overflow: visible;
-  padding: 1em 1em 0;
-  position: relative;
-}
-#footer div.store_footer {
-  clear: none;
-  display: block;
-  overflow: auto;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-}
 #footer div.left {  width: 37% }
 #footer div.right {
   text-align: right;
@@ -419,6 +435,61 @@ div#ombu-footer {
   height: 38px;
   left: 0;
   position: absolute;
+}
+#footer{
+  border-top: 1px solid #000000;
+  clear: both;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.store_footer, #footer-nav, #follow-us {
+  width: 280px;
+  float: left;
+  color:#000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.store_footer{
+  padding-left: 20px;
+}
+.store_footer #contact-info ul li.phone{
+  margin-left: 0;
+  float: none;
+  text-align: left;
+  padding-bottom: 5px;
+}
+#footer #contact-info{
+ position: inherit;
+}
+#footer-nav{
+  margin-left: 20px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  min-height: 120px;
+}
+#footer-nav ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+#footer-nav ul li a:hover{
+  color:#666666;
+}
+#footer h1{
+  font-size: 15px !important;
+  padding-top: 0px !important;
+}
+a.ombu-tagline{
+  display: block;
+  clear: both;
+  border-top: 1px solid #000000;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 11px;
+  color: #666;
 }
 
 /* === Pagination */
