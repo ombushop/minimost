@@ -1,0 +1,29 @@
+/* === CONTACT PAGE */
+#contact-form{
+  max-width:70%;
+}
+#contact-form input, #contact-form textarea{
+  width:100%;
+  border:0;
+  border: 1px solid #000000;
+  padding:10px;
+}
+#contact-form input:focus, #contact-form textarea:focus{
+  border: 1px solid #D2DBDA;
+}
+#contact-form input[type="submit"]{
+  text-indent: 0;
+  width: 150px;
+  font-weight: 400;
+  background-color: #000000;
+  padding: 5px;
+  margin-top: 10px;
+  color:#fff;
+  cursor: pointer;
+}
+#contact-form input[type="submit"]:hover{
+  opacity: 0.8;
+}
+#contact-form input[type="submit"]:focus{
+  background-color: #666;
+}
