@@ -1,4 +1,4 @@
-/*
+g/*
 **************************************
 OmbuShop - Tu Tienda Online
 **************************************
@@ -351,7 +351,7 @@ p button img {  margin: 0 5px 0 0 }
   color: #333;
   font-weight: 300;
 }
-#product-details .price.selling {  font-size: 1.5em }
+#product-details .price.selling {  font-size: 1.5em; font-weight: 700; }
 .price.diff {
   color: #666;
   font-style: italic;
@@ -498,7 +498,7 @@ ul.thumbnails li.selected {  border-color: #999 }
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 270px;
+  width: 210px;
 }
 #product-images h4 {
   clear: both;
@@ -516,12 +516,12 @@ ul.thumbnails li.selected {  border-color: #999 }
   position: absolute;
 }
 #product-description {
-  border-right: 1px solid #eee;
   display: inline;
   float: left;
   margin-right: 25px;
   padding-right: 24px;
   width: 310px;
+  padding-left: 20px;
 }
 #product-description p {
   color: #222;
@@ -531,15 +531,25 @@ ul.thumbnails li.selected {  border-color: #999 }
 /* === CARRITO */
 #cart-form {
   display: inline;
-  float: left;
+  float: right;
   margin-bottom: 40px;
   width: 240px;
+  border: 1px solid #eee;
+  padding: 20px;
 }
 #cart-form button.large {
   font-size: 14px;
-  padding: 5px 10px;
+  padding: 6px 20px;
   margin-top: 10px;
   margin-bottom:20px;
+  color: #fff;
+  background: none;
+  border: 0;
+  background-color: #000;
+  text-shadow: none;
+  margin: 0;
+  font-weight: normal;
+  border-radius: 0;
 }
 #cart-form input {
   font-size: 16px;
@@ -550,6 +560,10 @@ ul.thumbnails li.selected {  border-color: #999 }
   font-size: 1em !important;
   line-height: 1.2em !important;
 }
+.payment_images span{
+  color: #000;
+}
+
 #taxon-crumbs {
   clear: left;
   display: block;
