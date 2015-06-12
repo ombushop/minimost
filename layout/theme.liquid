@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
 
     {% capture meta_title %}
@@ -23,10 +22,19 @@
     <meta charset="utf-8" />
     <title>{{ meta_title | strip_newlines | strip_html }}</title>
 
+    <!--[if lt IE 9]>
+      <script src="http://www.ombushop.com/assets/themes/minimost/javascripts/html5shiv.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <!-- Ombu Shop - Default CSS -->
     <link href='https://secure.ombushop.com/assets/shops/default.css' rel='stylesheet' type='text/css' />
 
-    <!-- Ombu Shop - Theme: Minimost -->
+		<!-- Ombu Shop - Theme: Minimost -->
+
+    <!-- Google typography and Fontawesome -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link href='/themes/minimost/stylesheets/reset.css' rel='stylesheet' type='text/css' />
     <link href='/themes/minimost/stylesheets/basic.css' rel='stylesheet' type='text/css' />
@@ -38,7 +46,6 @@
     {{ 'products.css' | asset_url | stylesheet_tag }}
 
     <link href='/themes/minimost/stylesheets/logo.css' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <script src='/themes/minimost/javascripts/jquery-1.4.2.min.js' type='text/javascript'></script>
     <script src='/themes/minimost/javascripts/jquery.validate.min.js' type='text/javascript'></script>
@@ -49,7 +56,7 @@
     <script src='/themes/minimost/javascripts/cloud-zoom.1.0.2.min.js' type='text/javascript'></script>
 
     <!-- jQuery Masonry -->
-    <script src='/themes/minimost/javascripts/jquery.masonry.min.js' type='text/javascript'></script>
+    <script src='/themes/minimost/javascripts/masonry.pkgd.min.js' type='text/javascript'></script>
     <script src='/themes/minimost/javascripts/jquery.imagesloaded.min.js' type='text/javascript'></script>
 
     <script src='/themes/minimost/javascripts/product.min.js' type='text/javascript'></script>
@@ -58,11 +65,35 @@
 
     <script type="text/javascript">
       jQuery(document).ready(function(){
+        // masonry
         var $container = $('.product-listing');
         $container.imagesLoaded(function(){
+
           $container.masonry({
-            itemSelector : '.product'
+            isAnimated: true,
+            isResizable: true,
+            isFitWidth: true,
+            columnWidth: 250,
+            gutter: 15,
+            itemSelector: '.product'
           });
+
+        });
+        // categories menu
+        $('#taxonomies ul.navigation-list > li > ul').show();
+        var categories_opened = true;
+        $('#taxonomies > ul.navigation-list > li > h5').click(function(e){
+          if(categories_opened == true){
+            // close categories
+            $('#taxonomies ul.navigation-list > li > ul').slideUp(300);
+            $('#taxonomies > ul.navigation-list').removeClass("opened");
+            categories_opened = false;
+          } else {
+            // open categories
+            categories_opened = true;
+            $('#taxonomies > ul.navigation-list').addClass("opened");
+            $('#taxonomies ul.navigation-list > li > ul').slideDown(300);
+          }
         });
       });
     </script>
@@ -99,7 +130,9 @@
 
   </head>
 
-  <body class="{% if template == 'show' %} one-col {% else %} two-col {% endif %}" {% if template == 'show' %} id="product-details" {% endif %}>
+  <body class="theme-minimost{% if template == 'show' %} template-show{% endif %}{% if template == 'index' %} template-index{% endif %}{% if template == 'page' %} template-page{% endif %}" {% if template == 'show' %} id="product-details" {% endif %}>
+
+    <!-- facebook code -->
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -108,9 +141,9 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end facebook code -->
 
-    <div id="all">
-
+      <!-- admin bar -->
       {% if current_user %}
         {% if current_user.is_admin? %}
         <div id="admin-bar" class="top-bar">
@@ -131,104 +164,106 @@
           {% endunless %}
         {% endif %}
       {% endif %}
+      <!-- end admin bar -->
 
       {% include 'flash' %}
 
-      <div id="page">
-        <div id="header" class="container_bg">
+      <div id="page-container">
 
+        <header>
+          <div id="header-content">
+           <div id="contact-info">
+             <ul>
+               <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+               <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+               <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+               <li class="google-plus" title="Google Plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+               <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+               <li class="phone"><i class="fa fa-phone"></i> 678-678-6789</li>
+             </ul>
+           </div>
           {% include 'logo' %}
-
-          <ul id="cart_bar">
-            <li class="cart-indicator">
+          <div id="search_bar">
+            <form accept-charset="UTF-8" action="/products" method="get">
+              <div style="margin:0;padding:0;display:inline">
+                <input name="utf8" type="hidden" value="✓" />
+              </div>
+              <label for="keywords">Buscar</label>
+              <input id="keywords" name="keywords" type="text" value="{{ keywords }}" />
+              <input type="submit" value="Buscar" id="search-button" />
+            </form>
+          </div>
+          <div id="cart-bar">
+            <p class="cart-indicator">
               {% if current_order.item_count == 0 %}
                 <a href="/cart" class="empty" title="Cart">Carrito: (Vacío)</a>
               {% else %}
                 <a href="/cart" class="full" title="Cart">Carrito: {{ current_order.item_count }}</a>
               {% endif %}
-            </li>
-          </ul>
-          <div id="contact-info">
-            <ul>
-              <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
-              <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
-              <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-              <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
-            </ul>
-          </div>
-          <div id="search_bar">
-            <form accept-charset="UTF-8"
-                  action="/products" method="get">
-                <div style="margin:0;padding:0;display:inline">
-                  <input name="utf8" type="hidden" value="✓">
-                </div>
-                <label for="keywords">Buscar:</label>
-                <input id="keywords" name="keywords" type="text" value="{{ keywords }}">
-                <input type="submit" value="Buscar">
-            </form>
-          </div>
+            </p>
+          </div><!-- end #cart-bar -->
 
-          <!-- page navigation -->
-          <ul id="navigation_bar">
+
+        </div>
+        <div id="sub-header">
+          <nav id="nav-container">
+            <ul id="navigation-bar">
+              <li><a href="/products">Productos</a></li>
+              {% for page in pages %}
+              <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+
+
+        </div>
+        </header>
+
+        {{ content_for_layout }}
+        <div class="push"></div>
+      </div> <!-- end #page-container -->
+      <footer>
+        <div class="footer-container">
+          <div class="store_footer">
+          <div id="logo">
+            {% include 'logo' %}
+          </div>
+          <p>{{ shop.footer }}</p>
+        </div>
+        <nav>
+          <h1>Navegación</h1>
+          <ul>
             {% if shop.homepage %}
-            <li><a href="/products">Productos</a></li>
+              <li><a href="/products">Productos</a></li>
             {% endif %}
             {% for page in pages %}
-            <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
+              <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
             {% endfor %}
           </ul>
-          <!-- end page navigation -->
+        </nav>
+        <div id="contact-info">
+          <h1>Contacto</h1>
+          <ul>
+            <li title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+            <li title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li title="Google Plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li class="phone"><i class="fa fa-phone"></i> 678-678-6789</li>
+          </ul>
+        </div>
+      </div>
+      <div id="ombushop-footer">
+        <div class="footer-container">
+          <a href="#" target="_blank" title="OmbuShop. Tu plataforma de tienda online" ><strong>Ombushop.</strong> Tu plataforma de tienda online.</a>
+        </div>
+      </div>
+    </footer>
 
-        </div><!-- end "header" -->
-
-        <div id="wrapper" class="container">
-
-          {{ content_for_layout }}
-
-          <div id="footer">
-            <div class="footer-container">
-              <div class="store_footer">
-                <div id="contact-info">
-                  <h1>Contactanos</h1>
-                  <ul>
-                    <li class="phone"><i class="fa fa-phone"></i>678-678-6789</li>
-                  </ul>
-                </div>
-                <p>{{ shop.footer }}</p>
-              </div>
-            <div id="footer-nav">
-              <h1>Navegación</h1>
-              <ul class="links">
-                {% if shop.homepage %}
-                <li><a href="/products">Productos</a></li>
-                {% endif %}
-                {% for page in pages %}
-                <li {% if page.url contains current_path and current_path != "/" %}class="current-page"{% endif %}><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div id="follow-us">
-                <h1>Seguinos</h1>
-                <div id="contact-info">
-                  <ul>
-                    <li class="facebook" title="Facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li class="pinterest" title="Pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
-                    <li class="twitter" title="Twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li class="instagram" title="Instagram"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li class="google-plus" title="Google Plus"><a href="#" target="_blank"></a></li>
-                    <li class="youtube" title="Youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                  </ul>
-              </div>
-            </div>
-            </div>
-            <a href="#" class="ombu-tagline" title="Ombushop. Tu plataforma de venta online" target="_blank"><strong>OmbuShop.</strong>Tu plataforma de venta online</a>
-          </div> <!-- end "footer" -->
-        </div> <!-- end "wrapper" -->
-      </div> <!-- end "page" -->
-    </div> <!-- end "all" -->
+    <!-- pinterest code -->
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+    <!-- end pinterest code -->
   </body>
 </html>

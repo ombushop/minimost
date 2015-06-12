@@ -1,6 +1,11 @@
-<div class="static-page-wrapper">
-	<h1>{{ page.title }}</h1>
-	<div id="content">
-	  {{ page.content }}
-	</div>
-</div>
+<!--
+Template: Minimost
+File: page.liquid
+-->
+
+<section id="content" class="static-page-wrapper">
+  <h2>{{ page.title }}</h2>
+  <div id="inner-page-content" class="page">
+    {{ page.content }}
+  </div>
+</section>
