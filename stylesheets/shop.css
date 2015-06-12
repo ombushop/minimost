@@ -671,6 +671,9 @@ body.template-page #content p {
   margin-bottom: 1em;
   font-size: 14px;
 }
+body.template-page #content .page img{
+  max-width: 100%;
+}
 
 /* ========================================= */
 /* Product content */
