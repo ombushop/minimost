@@ -755,7 +755,7 @@ button.buy-button:active {
 #cart-form .payment_images span {
   color: inherit;
 }
-#cart-form .payment_images.first_tier img{
+#cart-form .payment_images .first_tier img{
   display: block;
 }
 #cart-form .social-container {
