@@ -46,7 +46,6 @@ File: show.liquid
             <span>{{ selected_variant.options_text }}</span>
           </h4>
           <ul id="variant-thumbnails" class="thumbnails">
-            LENGTH OF PRODUCT VARIANTS {{ product_variants | size }}
             {% for variant in product_variants %}
               {% if variant.available? %}
                 {% for image in variant.images %}
@@ -58,7 +57,7 @@ File: show.liquid
                 {% endfor %}
               {% endif %}
             {% endfor %}
-
+          </ul>
         {% endif %}
 
       {% endif %}
@@ -103,7 +102,6 @@ File: show.liquid
         <span>Envíos: A convenir</span><br>
         <div class="first_tier">
           {% assign gateway = shop.payment_gateways.first %}
-          <span>En hasta 18 cuotas con:</span>
           <img src="{{ gateway.payment_options_image }}">
         </div>
       </div> <!-- end .payment_images -->
