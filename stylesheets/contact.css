@@ -1,0 +1,58 @@
+/* ========================================= */
+/* Contact Page */
+#contact-form label{
+  display: block;
+  font-weight: 500;
+  font-size: 0.8em;
+  letter-spacing: 0em;
+  padding: 0.2em 0;
+}
+#contact-form input[type="submit"], #contact-form input[type="submit"]:focus{
+  background-color: #000;
+  border: none;
+  color: #fff;
+  padding: 5px 18px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor:pointer;
+  border-radius: 3px;
+}
+#contact-form input[type="submit"]:hover{
+  background-color: #939393;
+  color: #ffffff;
+  opacity: 0.8;
+}
+#contact-form input[type="submit"]:active{
+  opacity: 1;
+}
+#contact-form #subject-input, #contact-form #email-input{
+  width:49%;
+  margin-bottom: 1%;
+}
+#contact-form #email-input {
+  margin-right:2%;
+}
+#contact-form #subject-input input, #contact-form #email-input input{
+  width: 100%;
+  border: 1px solid #E8E8E8;
+  padding: 8px;
+  font-size: 0.9em;
+  background: none;
+}
+#contact-form textarea{
+  width:49%;
+  padding:1%;
+  font-size: 0.9em;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 1%;
+  display:block;
+  background: none;
+}
+\
+/* 600px and below */
+@media screen and (max-width: 600px) {
+  #contact-form #subject-input, #contact-form #email-input{
+    width:100%;
+    margin-right:0;
+  }
+}
