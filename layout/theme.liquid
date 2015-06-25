@@ -154,7 +154,7 @@
           </div>
         </div>
         {% else %}
-          {% unless current_user.is_anonymous? %}
+          {% if current_user.is_wholesale? %}
         <!-- if mayorista -->
         <div id="admin-bar" class="top-bar">
           <div id="login-bar">
@@ -162,7 +162,7 @@
             <a href="/logout" class="btn btn-inverse"><i class="icon-off icon-white"></i> Salir</a>
           </div>
         </div>
-          {% endunless %}
+          {% endif %}
         {% endif %}
       {% endif %}
       <!-- end admin bar -->
