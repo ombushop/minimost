@@ -501,7 +501,7 @@ div.breadcrumbs li {
 
 footer {
   overflow: auto;
-  padding: 30px 0 20px 0;
+  padding: 0px 0 20px 0;
   padding-bottom: 0px;
   border-top: 1px solid #E8E8E8;
 }
