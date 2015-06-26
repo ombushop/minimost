@@ -146,7 +146,7 @@
 
       <!-- admin bar -->
       {% if current_user %}
-        {% if current_user.is_admin? || current_user.is_wholesale? || current_user.is_customer? %}
+        {% if current_user.is_admin? or current_user.is_wholesale? or current_user.is_customer? %}
           <div id="admin-bar" class="top-bar">
             <div id="login-bar">
               <span class="shop-name"><i class="icon-shopping-cart icon-white"></i> {{ current_user.shop.name }}</span> <span class="user-email"><i class="icon-user icon-white"></i> {{ current_user.email }} {% if current_user.is_wholesale? %}(mayorista) {% endif %}</span>
