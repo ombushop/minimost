@@ -849,9 +849,6 @@ button.buy-button:active {
   #contact-form #subject-input, #contact-form #email-input,#contact-form textarea{
     width: 100%;
   }
-  .payment_images{
-    display:none;
-  }
   .product-content #main-image {
     float: none;
     margin-right: 0;
