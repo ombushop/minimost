@@ -276,8 +276,10 @@ header #header-content{
 
 /* Categories */
 #taxonomies {
-  position: absolute;
+  position: relative;
   z-index: 10000;
+  float: left;
+  max-width: 160px;
 }
 #taxonomies ul.navigation-list {
   background: #F2F4F9;
@@ -285,12 +287,12 @@ header #header-content{
 #taxonomies ul.navigation-list > li > ul {
   font-size: 1.5em;
   line-height: 1.5em;
-  position: absolute;
   top: 66px;
   left: 0;
   z-index: 500;
   min-width: 160px;
   font-style: italic;
+  margin-bottom: 30px;
 }
 #taxonomies ul.navigation-list > li > ul> li.current > a, #taxonomies ul.navigation-list > li > ul> li.root > ul > li.current> a{
   background-color: #F2E9E9;
@@ -918,6 +920,8 @@ button.buy-button:active {
     position: static;
     text-align: center;
     margin: 1em 0;
+    max-width: none;
+    float: none;
   }
   #taxonomies > ul.navigation-list > li > h5{
     width:100%;
