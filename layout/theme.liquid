@@ -155,15 +155,14 @@
               <a href="{{ current_path }}" title="Recargar la tienda" class="btn active btn-inverse"><i class="icon-shopping-cart icon-white"></i> Tienda {{ current_user.shop.name }}</a>
             </li>
           {% endif %}
-          {% if current_user.has_partner? %}
-            <li><a href="/admin/sellers" title="Ir a Admin Partner" class="btn btn-inverse"><i class="icon-home icon-white"></i> Admin Partner</a><li>
-            <li><a href="{{ current_user.partner_url }}" target="_blank" class="btn btn-inverse"><i class="icon-briefcase icon-white"></i> Ver perfil de Partner</a></li>
-          {% endif %}
           <li tabindex="1" class="menu btn btn-inverse dropdown-toggles">
               <i class="icon-user icon-white"></i> {{ current_user.email }} {% if current_user.is_wholesale? %}(mayorista) {% endif %}
-              {% if current_user.is_admin? %}<span class="caret"></span>{% endif %}
+              <span class="caret"></span>
             <ul class="dropdown-menu">
-              <li><a href="/admin/account">Mi cuenta</a></li>
+              {% if current_user.has_partner? or current_user.is_wholesale? %}
+              {% else %}
+                <li><a href="/admin/account">Mi cuenta</a></li>
+              {% endif %}
               <li><a href="/logout">Salir</a></li>
             </ul>
           </li>
@@ -172,7 +171,6 @@
       {% endif %}
     {% endif %}
     <!-- end admin bar -->
-
 
       {% include 'flash' %}
 
