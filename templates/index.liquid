@@ -16,7 +16,18 @@ File: index.liquid
         <h3 class="search-results-title">Resultados para: <span class="search-results-keywords">{{ keywords }}</span></h3>
       {% endif %}
 
-      {% include 'sidebar' %}
+      <div id="taxonomies" class="sidebar-item">
+        <h1>Catálogo</h1>
+        {% unless categories.size == 0 %}
+          <ul class="navigation-list">
+            <li><h5>Categorías</h5>
+              <ul>
+                {% include 'sidebar' %}
+              </ul>
+            </li>
+          </ul>
+        {% endunless %}
+      </div>
 
       <ul class="product-listing">
         {% for product in products %}
@@ -59,7 +70,18 @@ File: index.liquid
     {% else %}
     <div class="no-products">
       <h3 class="search-results-title">No se encontraron productos.</h3>
-      {% include 'sidebar' %}
+      <div id="taxonomies" class="sidebar-item">
+        <h1>Catálogo</h1>
+        {% unless categories.size == 0 %}
+          <ul class="navigation-list">
+            <li><h5>Categorías</h5>
+              <ul>
+                {% include 'sidebar' %}
+              </ul>
+            </li>
+          </ul>
+        {% endunless %}
+      </div>
     </div>
     {% endif %}
 

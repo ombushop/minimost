@@ -387,6 +387,12 @@ div.breadcrumbs li {
   margin: 0;
 }
 
+.parent_category {
+  font-weight: 900 !important;
+}
+.children_list {
+  padding-left: 0.5em;
+}
 
 /* ========================================= */
 /* Product index */
