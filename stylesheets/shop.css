@@ -80,6 +80,12 @@ body {
   line-height: 1.3em;
   color: #1c1e1d;
 }
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
 #page-container {
   padding: 0 20px;
   min-height: 100%;
