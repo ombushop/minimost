@@ -44,7 +44,12 @@ File: index.liquid
                 {% endif %}
                 <div class="product-info">
                   <h4 class="product-name">{{ product.name }}</h4>
-                  <p class="product-price">{{ product.price_with_currency }}</p>
+                  {% if current_user.is_wholesale? == true %}
+                    {% assign product_price_with_currency = product.wholesale_price_with_currency %}
+                  {% else %}
+                    {% assign product_price_with_currency = product.price_with_currency %}
+                  {% endif %}
+                  <p class="product-price">{{ product_price_with_currency }}</p>
                 </div>
               </a><!-- end .product-link -->
 
